@@ -80,9 +80,15 @@ ul {
   padding-bottom: 25px;
 }
 .contacts .link {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding-top: 32px;
   padding-bottom: 32px;
+  fill: var(--primery-text-color);
+}
+.icon-contakts {
+  margin-right: 10px;
 }
 .site-nav .link {
   display: block;
@@ -140,8 +146,10 @@ ul {
 .contacts .link:hover,
 .contacts .link:focus,
 .address .link:hover,
-.address .link:focus {
+.address .link:focus,
+.our-team .link {
   color: var(--prymery-accent-color);
+  fill: var(--prymery-accent-color);
 }
 .list {
   list-style: none;
@@ -150,10 +158,17 @@ ul {
   text-decoration: none;
 }
 /* Секция Герой */
-.hero {
+.hero.overlay {
+  max-width: 1600px;
+  height: 600px;
   margin-left: auto;
   margin-right: auto;
   background-color: var(--background-color);
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/imgoverlay.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   text-align: center;
   padding: 200px 0;
 }
@@ -166,7 +181,7 @@ ul {
   text-align: center;
   letter-spacing: 0.06em;
 }
-.main.button {
+.hero.button {
   min-width: 200px;
   padding: 10px 32px;
   margin-top: 30px;
@@ -181,8 +196,8 @@ ul {
   border: 0;
   border-radius: 4px;
 }
-.main.button:hover,
-.main.button:focus {
+.hero.button:hover,
+.hero.button:focus {
   background-color: var(--secondary-accent-color);
 }
 /*особенности компании*/
@@ -200,6 +215,16 @@ ul {
   justify-content: space-between;
   margin-left: auto;
   margin-right: auto;
+}
+.features-block {
+  width: 270px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  background: var(--secondary-white-color);
+  border-radius: 4px;
 }
 .features.list {
   display: flex;
@@ -246,7 +271,7 @@ ul {
   height: auto;
 }
 /* Наша команда */
-.our-team.list {
+.our-team .list {
   display: flex;
 }
 .our-team .item {
@@ -254,6 +279,24 @@ ul {
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+.list.social {
+  margin-top: 16px;
+  justify-content: space-between;
+}
+.our-team .link {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  fill: #afb1b8;
+}
+.our-team .link:hover,
+.our-team .link:focus {
+  fill: var(--primery-white-color);
+  background-color: var(--prymery-accent-color);
 }
 .our-team .item + .item {
   margin-left: 30px;
